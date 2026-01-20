@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Malang Rafting - Paket Arung Jeram Murah & Aman di Batu</title>
+    <meta name="description" content="Penyedia Jasa Rafting Malang terbaik. Paket arung jeram murah, aman, dan seru untuk keluarga, gathering perusahaan, dan pemula di Batu Malang. Booking sekarang!">
+    <meta name="keywords" content="rafting malang, jasa rafting batu, arung jeram malang, paket outbound malang, wisata batu malang">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.malangrafting.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.malangrafting.com/">
+    <meta property="og:title" content="Malang Rafting - Jasa Rafting Terbaik">
+    <meta property="og:description" content="Pacu adrenalinmu di sungai terbaik Malang. Aman, seru, dan terjangkau.">
+    <meta property="og:image" content="img/bg.webp">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0077b6;
+            --accent-orange: #f48c06;
+            --text-dark: #333;
+            --bg-light: #f8f9fa;
+            --wa-green: #25d366; /* Warna Resmi WhatsApp */
+        }
+
+        body { font-family: 'Poppins', sans-serif; color: var(--text-dark); position: relative;}
+        html { scroll-behavior: smooth; }
+
+        /* Navbar Styling */
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 700; color: var(--primary-blue) !important; font-size: 1.5rem; }
+        .nav-link { font-weight: 500; color: var(--text-dark); }
+        .nav-link:hover, .nav-link.active { color: var(--primary-blue) !important; }
+        .btn-cta-nav {
+            background-color: var(--accent-orange);
+            color: white;
+            border-radius: 20px;
+            padding: 8px 25px;
+            font-weight: 600;
+        }
+        .btn-cta-nav:hover { background-color: #e87c05; color: white; }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 75, 120, 0.7), rgba(0, 75, 120, 0.7)), url('img/bg.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 20px; }
+        .btn-hero {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: none;
+            transition: transform 0.3s;
+        }
+        .btn-hero:hover { transform: translateY(-3px); background-color: #e87c05; color: white; }
+
+        /* Section General */
+        section { padding: 80px 0; }
+        .section-title h2 { font-weight: 700; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 1px; }
+        .section-title p { color: #6c757d; max-width: 600px; margin: 0 auto; }
+
+        /* About Image Fix */
+        .about-img-container {
+            position: relative;
+            width: 100%;
+            height: 400px; 
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .about-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Services & Pricing */
+        .service-card { padding: 30px; border-radius: 15px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; }
+        .service-card:hover { transform: translateY(-10px); }
+        .icon-box { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .pricing-card { border: none; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.3s; }
+        .pricing-header { background-color: var(--primary-blue); color: white; padding: 30px; text-align: center; }
+        .pricing-header.popular { background-color: var(--accent-orange); }
+        .price { font-size: 2rem; font-weight: 700; color: var(--text-dark); }
+
+        /* Gallery */
+        .gallery-img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; transition: 0.3s; cursor: pointer; }
+        .gallery-img:hover { filter: brightness(0.8); }
+        
+        /* Blog Cards */
+        .blog-card { border: none; transition: 0.3s; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .blog-card img { height: 220px; object-fit: cover; }
+        .blog-card .card-body { padding: 1.5rem; }
+        .blog-date { font-size: 0.85rem; color: #999; margin-bottom: 10px; display: block; }
+        .blog-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; }
+        .blog-title a { text-decoration: none; color: var(--text-dark); transition: 0.2s; }
+        .blog-title a:hover { color: var(--primary-blue); }
+
+        /* Contact Form Section */
+        .contact-form-container { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .form-control:focus, .form-select:focus { border-color: var(--primary-blue); box-shadow: 0 0 0 0.25rem rgba(0, 119, 182, 0.25); }
+
+        /* CTA & Footer */
+        .cta-section { background: linear-gradient(90deg, var(--primary-blue) 0%, #0096c7 100%); color: white; text-align: center; }
+        footer { background-color: #0d1b2a; color: white; padding: 60px 0 20px 0; }
+        footer a { color: #adb5bd; text-decoration: none; }
+        footer a:hover { color: var(--accent-orange); }
+
+        /* Floating Buttons */
+        .floating-btn-container {
+            position: fixed; bottom: 25px; right: 25px; z-index: 9999;
+            display: flex; flex-direction: column; gap: 15px; align-items: center;
+        }
+        #btn-back-to-top {
+            display: none; background-color: var(--primary-blue); color: white;
+            width: 45px; height: 45px; border-radius: 50%; border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; cursor: pointer;
+        }
+        #btn-back-to-top:hover { background-color: #005f92; transform: translateY(-3px); }
+        .btn-whatsapp-float {
+            background-color: var(--wa-green); color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s; text-decoration: none; animation: pulse-green 2s infinite;
+        }
+        .btn-whatsapp-float:hover { background-color: #20b85c; color: white; transform: scale(1.1); }
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section { text-align: center; }
+            .about-img-container { height: 300px; }
+            .floating-btn-container { bottom: 20px; right: 20px; }
+            .btn-whatsapp-float { width: 55px; height: 55px; font-size: 28px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": "Malang Rafting",
+      "description": "Jasa Rafting Malang terbaik dan terpercaya.",
+      "image": "https://www.malangrafting.com/img/bg.webp",
+      "telephone": "+6281234567890"
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-water"></i> Malang Rafting
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#paket">Paket Harga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#form-kontak">Kontak</a></li>
+                </ul>
+                <a href="https://wa.me/6281234567890" class="btn btn-cta-nav">
+                    <i class="bi bi-whatsapp"></i> Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="hero-title">Jasa Rafting Malang Terbaik & Paling Seru!</h1>
+                    <p class="lead mb-4">Rasakan sensasi arung jeram yang aman bersama pemandu profesional. Paket lengkap untuk keluarga, gathering kantor, dan pemula.</p>
+                    <a href="#paket" class="btn btn-hero shadow">Booking Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <div class="about-img-container">
+                        <img src="img/bg.webp" alt="Tim Malang Rafting" width="600" height="400" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3 text-primary">Mengapa Memilih Kami?</h2>
+                    <p class="text-muted">Malang Rafting adalah penyedia <strong>Jasa Rafting Malang</strong> yang berpengalaman. Kami berkomitmen memberikan pengalaman petualangan tak terlupakan dengan standar keselamatan internasional (Safety First).</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Pemandu & Rescue Bersertifikat</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Peralatan Standar Internasional</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Asuransi Peserta Included</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline-primary mt-3">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Layanan Petualangan Kami</h2>
+                <p>Lebih dari sekadar arung jeram, kami menyediakan paket wisata lengkap.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card text-center bg-white">
+                        <div class="icon-box"><i class="bi bi-tsunami"></i></div>
+                        <h5>Rafting Adventure</h5>
+                        <p class="small text-muted">Susur sungai grade 2-3 yang aman.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card text-center bg-white">
+                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <h5>Outbound Training</h5>
+                        <p class="small text-muted">Team building games seru.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card text-center bg-white">
+                        <div class="icon-box"><i class="bi bi-bullseye"></i></div>
+                        <h5>Paintball War</h5>
+                        <p class="small text-muted">Simulasi tempur di hutan pinus.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card text-center bg-white">
+                        <div class="icon-box"><i class="bi bi-jeep"></i></div>
+                        <h5>Offroad Jeep</h5>
+                        <p class="small text-muted">Jelajah alam liar Batu dengan Jeep.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="fw-bold">Bingung Pilih Paket?</h2>
+            <p class="mb-4">Konsultasikan kebutuhan gathering atau liburan keluarga Anda dengan tim kami.</p>
+            <a href="https://wa.me/6281234567890" class="btn btn-light btn-lg rounded-pill fw-bold text-primary">
+                <i class="bi bi-whatsapp"></i> Chat WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="paket">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Pilihan Paket Rafting</h2>
+                <p>Harga transparan, fasilitas lengkap, tanpa biaya tersembunyi.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pricing-card h-100">
+                        <div class="pricing-header">
+                            <h4>Family Fun</h4>
+                            <p class="mb-0">Pemula</p>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="price mb-3">Rp 150rb<span class="fs-6 text-muted">/pax</span></div>
+                            <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 200px;">
+                                <li><i class="bi bi-check text-success"></i> Jarak 5 KM</li>
+                                <li><i class="bi bi-check text-success"></i> Durasi 1.5 Jam</li>
+                                <li><i class="bi bi-check text-success"></i> Snack & Minum</li>
+                            </ul>
+                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalPaket1">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card h-100">
+                        <div class="pricing-header popular">
+                            <h4>Adventure Rush</h4>
+                            <p class="mb-0">Paling Laris!</p>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="price mb-3">Rp 175rb<span class="fs-6 text-muted">/pax</span></div>
+                            <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 200px;">
+                                <li><i class="bi bi-check text-success"></i> Jarak 10 KM</li>
+                                <li><i class="bi bi-check text-success"></i> Durasi 2.5 Jam</li>
+                                <li><i class="bi bi-check text-success"></i> Makan Prasmanan</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalPaket2">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card h-100">
+                        <div class="pricing-header">
+                            <h4>Corporate Gathering</h4>
+                            <p class="mb-0">Lengkap</p>
+                        </div>
+                        <div class="pricing-body text-center">
+                            <div class="price mb-3">Hubungi Kami</div>
+                            <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 200px;">
+                                <li><i class="bi bi-check text-success"></i> Rafting 10 KM</li>
+                                <li><i class="bi bi-check text-success"></i> Fun Games</li>
+                                <li><i class="bi bi-check text-success"></i> Aula & Sound</li>
+                            </ul>
+                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalPaket3">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Galeri Keseruan</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <img src="img/rafting1.webp" class="gallery-img" alt="Rafting 1" loading="lazy">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="img/rafting2.webp" class="gallery-img" alt="Rafting 2" loading="lazy">
+                </div>
+                <div class="col-md-4 col-12">
+                    <img src="img/rafting3.webp" class="gallery-img" alt="Rafting 3" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Apa Kata Mereka?</h2>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide text-center" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card border-0 bg-light p-4 mx-auto" style="max-width: 700px;">
+                            <p class="fst-italic">"Seru banget! Pemandunya ramah dan kocak, bikin suasana cair. Jasa rafting Malang paling recommended!"</p>
+                            <h5 class="fw-bold mt-3">- Andi, Surabaya</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-0 bg-light p-4 mx-auto" style="max-width: 700px;">
+                            <p class="fst-italic">"Safety-nya oke banget. Awalnya takut karena bawa anak kecil, tapi ternyata aman."</p>
+                            <h5 class="fw-bold mt-3">- Siska, Jakarta</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>FAQ</h2>
+            </div>
+            <div class="accordion mw-800 mx-auto" id="accordionExample" style="max-width: 800px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Apakah aman bagi yang tidak bisa berenang?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Sangat aman.</strong> Setiap peserta wajib menggunakan pelampung (life jacket).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Apa saja perlengkapan yang harus dibawa?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Pakaian ganti, perlengkapan mandi, sunblock, dan sandal gunung.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Berita & Artikel Terbaru</h2>
+                <p>Dapatkan tips, panduan, dan informasi menarik seputar rafting dan wisata di Malang.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card blog-card h-100">
+                        <img src="img/rafting3.webp" class="card-img-top" alt="Tips Rafting Pemula" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 15 Jan 2024</span>
+                            <h5 class="blog-title"><a href="artikel1.html">7 Tips Aman Rafting untuk Pemula</a></h5>
+                            <p class="card-text small text-muted flex-grow-1">Panduan lengkap persiapan sebelum arung jeram agar pengalamanmu tetap aman dan menyenangkan.</p>
+                            <a href="artikel1.html" class="text-primary fw-bold text-decoration-none small mt-3">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card blog-card h-100">
+                        <img src="img/rafting1.webp" class="card-img-top" alt="Lokasi Rafting Terbaik" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 10 Jan 2024</span>
+                            <h5 class="blog-title"><a href="artikel2.html">5 Lokasi Rafting Terbaik di Batu</a></h5>
+                            <p class="card-text small text-muted flex-grow-1">Rekomendasi spot arung jeram dengan pemandangan indah dan grade sungai yang menantang.</p>
+                            <a href="artikel2.html" class="text-primary fw-bold text-decoration-none small mt-3">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card blog-card h-100">
+                        <img src="img/rafting2.webp" class="card-img-top" alt="Perlengkapan Rafting" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 05 Jan 2024</span>
+                            <h5 class="blog-title"><a href="artikel3.html">Perlengkapan Wajib Saat Rafting</a></h5>
+                            <p class="card-text small text-muted flex-grow-1">Jangan sampai salah kostum! Simak daftar barang yang harus dibawa dan ditinggalkan.</p>
+                            <a href="artikel3.html" class="text-primary fw-bold text-decoration-none small mt-3">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-kontak" class="bg-primary text-white py-5" style="background: linear-gradient(135deg, #0077b6, #023e8a);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-container text-dark">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold text-primary">Formulir Konsultasi & Booking</h2>
+                            <p class="text-muted">Isi formulir di bawah ini, dan Admin kami akan segera membalas via WhatsApp.</p>
+                        </div>
+                        
+                        <form id="waForm" onsubmit="sendToWhatsapp(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="waName" class="form-label fw-bold">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="waName" placeholder="Contoh: Budi Santoso" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="waDate" class="form-label fw-bold">Rencana Tanggal</label>
+                                    <input type="date" class="form-control" id="waDate" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="waPax" class="form-label fw-bold">Jumlah Peserta</label>
+                                    <input type="number" class="form-control" id="waPax" placeholder="Contoh: 10" min="1" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="waPacket" class="form-label fw-bold">Pilihan Paket</label>
+                                    <select class="form-select" id="waPacket">
+                                        <option value="Tanya Dulu" selected>Masih Tanya-tanya</option>
+                                        <option value="Family Fun (Rp 150rb)">Family Fun (Rp 150rb)</option>
+                                        <option value="Adventure Rush (Rp 175rb)">Adventure Rush (Rp 175rb)</option>
+                                        <option value="Corporate Gathering">Corporate Gathering</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="waMessage" class="form-label fw-bold">Pesan / Pertanyaan Tambahan</label>
+                                    <textarea class="form-control" id="waMessage" rows="3" placeholder="Contoh: Apakah ada diskon untuk rombongan?"></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-warning w-100 fw-bold py-3 text-white shadow hover-effect" style="font-size: 1.1rem;">
+                                        <i class="bi bi-whatsapp me-2"></i> Kirim Pesan ke WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4 fw-bold">
+                        <i class="bi bi-water text-warning"></i> Malang Rafting
+                    </h4>
+                    <p class="text-secondary">
+                        Penyedia jasa rafting Malang terpercaya. Kami menghadirkan pengalaman arung jeram yang aman, seru, dan tak terlupakan untuk liburan Anda.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white bg-primary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white bg-primary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white bg-dark rounded-circle p-2 d-flex align-items-center justify-content-center border border-secondary" style="width: 40px; height: 40px;"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4 border-bottom border-warning d-inline-block pb-2">Navigasi</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="#home" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Beranda</a></li>
+                        <li class="mb-2"><a href="#about" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Tentang Kami</a></li>
+                        <li class="mb-2"><a href="#layanan" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Layanan</a></li>
+                        <li class="mb-2"><a href="#paket" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Paket Harga</a></li>
+                        <li class="mb-2"><a href="#blog" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Berita</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-decoration-none text-secondary hover-link"><i class="bi bi-chevron-right small text-warning"></i> Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="text-white mb-4 border-bottom border-warning d-inline-block pb-2">Kontak & Lokasi</h5>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <ul class="list-unstyled text-secondary">
+                                <li class="mb-3 d-flex gap-2">
+                                    <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                                    <span>Jl. Wisata Alam No. 12, Kota Batu, Malang, Jawa Timur 65314</span>
+                                </li>
+                                <li class="mb-3 d-flex gap-2">
+                                    <i class="bi bi-whatsapp text-warning fs-5"></i>
+                                    <span>
+                                        <div class="small">Chat WhatsApp:</div>
+                                        <a href="https://wa.me/6281234567890" class="text-white text-decoration-none fw-bold">0812-3456-7890</a>
+                                    </span>
+                                </li>
+                                <li class="mb-3 d-flex gap-2">
+                                    <i class="bi bi-envelope-fill text-warning fs-5"></i>
+                                    <span>info@malangrafting.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ratio ratio-4x3 bg-secondary rounded overflow-hidden border border-secondary">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8906324208226!2d112.5273753!3d-7.9054707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78819555555555%3A0x1234567890abcdef!2sAlun-Alun+Kota+Wisata+Batu!5e0!3m2!1sid!2sid!4v1" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <hr class="border-secondary mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start text-secondary small">
+                    © 2024 <strong class="text-white">Malang Rafting</strong>. All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end text-secondary small mt-2 mt-md-0">
+                    Designed for <span class="text-warning">SEO & Performance</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-btn-container">
+        <button onclick="topFunction()" id="btn-back-to-top" title="Kembali ke atas">
+            <i class="bi bi-arrow-up fs-5"></i>
+        </button>
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20dengan%20paket%20Malang%20Rafting" target="_blank" class="btn-whatsapp-float" aria-label="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="modal fade" id="modalPaket1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Family Fun</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Paket aman untuk keluarga dan pemula.</p>
+                    <ul><li>Jarak 5KM</li><li>Snack & Minum</li><li>Guide & Rescue</li></ul>
+                    <h4 class="text-primary text-center">Rp 150.000</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/6281234567890" class="btn btn-success w-100">Booking WA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalPaket2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adventure Rush</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Paket terlaris dengan jeram menantang.</p>
+                    <ul><li>Jarak 10KM</li><li>Makan Prasmanan</li><li>Dokumentasi</li></ul>
+                    <h4 class="text-primary text-center">Rp 175.000</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/6281234567890" class="btn btn-success w-100">Booking WA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalPaket3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Corporate Gathering</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lengkap dengan Outbound dan Fasilitas Gathering.</p>
+                    <ul><li>Rafting + Games</li><li>Aula & Sound</li><li>Gala Dinner</li></ul>
+                    <div class="alert alert-info text-center">Hubungi untuk harga grup</div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/6281234567890" class="btn btn-success w-100">Konsultasi WA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Ambil elemen tombol
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // Saat user scroll ke bawah 20px dari atas dokumen, tombol muncul
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Saat tombol diklik, kembali ke atas
+        function topFunction() {
+            document.body.scrollTop = 0; // Untuk Safari
+            document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE dan Opera
+        }
+
+        // --- Script Form ke WhatsApp ---
+        function sendToWhatsapp(e) {
+            e.preventDefault(); // Mencegah reload halaman
+
+            // Ambil nilai dari form
+            const name = document.getElementById('waName').value;
+            const date = document.getElementById('waDate').value;
+            const pax = document.getElementById('waPax').value;
+            const packet = document.getElementById('waPacket').value;
+            const msg = document.getElementById('waMessage').value;
+
+            // Format Pesan WhatsApp
+            // %0A adalah kode untuk baris baru (Enter) di URL
+            const text = `Halo Admin Malang Rafting,%0A%0ASaya ingin bertanya/booking:%0A%0A*Nama:* ${name}%0A*Rencana Tanggal:* ${date}%0A*Jumlah Peserta:* ${pax} Orang%0A*Pilihan Paket:* ${packet}%0A*Pesan Tambahan:* ${msg}%0A%0AMohon infonya, Terima kasih.`;
+
+            // Nomor WA Tujuan (Ganti dengan nomor Anda, format 62...)
+            const phone = "6281234567890";
+
+            // Buka WhatsApp di tab baru
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
