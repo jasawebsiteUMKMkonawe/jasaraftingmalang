@@ -1,0 +1,30 @@
+# Robots.txt untuk https://jasaraftingmalang.vercel.app/
+# Dioptimalkan untuk memaksimalkan crawling pada halaman layanan dan artikel
+
+User-agent: *
+Allow: /
+
+# Mencegah crawling pada hasil pencarian internal (menghindari duplicate content)
+Disallow: /search
+Disallow: /?q=
+Disallow: /*?*
+
+# Mencegah crawling pada folder sistem/admin (jika ada di masa depan)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
+
+# Pastikan bot bisa mengakses aset CSS dan JS untuk rendering yang sempurna
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Peta Situs (Sangat Penting untuk SEO)
+Sitemap: https://jasaraftingmalang.vercel.app/sitemap.xml
